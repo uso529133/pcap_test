@@ -69,7 +69,7 @@ void print_tcp_data(tcp_hdr *p, uint8_t len) {
 	uint8_t data = *p->data;
 
 	printf("data(%d) : \"", len);
-	if (len > 10) len = 0;
+	if (len > 10) len = 10;
 	for (uint8_t i = 0; i < len; ++i) {
 		printf("\\x%02x", p->data[i]);
 	}
